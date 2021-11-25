@@ -97,5 +97,23 @@ namespace pr5
             }
             connection.Close();
         }
+        public void DeldBook(int Id)
+        {
+            string cmdt = $"DELETE FROM books WHERE idbooks= {Id}";
+            try
+            {
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand(cmdt, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+            connection.Close();
+            }
+        }
+     
+
     }
-}
+

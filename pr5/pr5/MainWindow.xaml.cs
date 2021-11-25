@@ -61,5 +61,14 @@ namespace pr5
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            db.DeldBook(idBook);
+            dgdbBook.ItemsSource = db.ReadBook();
+
+        }
     }
-}
+
+    }
+    
